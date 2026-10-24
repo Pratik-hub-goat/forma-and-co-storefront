@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7F5EF">
+  <title>Shop All Products — FORMA & CO.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <div class="demo-notice">PORTFOLIO DEMO · BROWSING ONLY · NO PURCHASES AVAILABLE</div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">forma<span>&</span>co.</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="shop.html">Shop</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="about.html">Our Story</a>
+    </nav>
+    <div class="header-actions">
+      <a href="search.html" aria-label="Search products">⌕ <span>Search</span></a>
+      <a href="wishlist.html" aria-label="Wishlist">♡</a>
+      <a href="bag.html" aria-label="Demo shopping bag">Bag <span class="bag-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="shop-page">
+    <section class="shop-intro">
+      <p class="eyebrow">THE FORMA COLLECTION</p>
+      <h1>Everyday objects.<br><em>Thoughtfully chosen.</em></h1>
+      <p>Explore our fictional collection of home, desk and lifestyle essentials.</p>
+      <span class="shop-disclaimer">DEMO CATALOG · NO PRODUCTS FOR SALE</span>
+    </section>
+
+    <section class="catalog-section">
+      <div class="catalog-top">
+        <div>
+          <p class="eyebrow">TAKE A CLOSER LOOK</p>
+          <h2>All products</h2>
+          <p id="result-count" aria-live="polite">Loading products…</p>
+        </div>
+        <label class="sort-control">
+          <span>Sort by</span>
+          <select id="sort-select">
+            <option value="featured">Featured first</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name: A–Z</option>
+            <option value="newest">Newest first</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="catalog-layout">
+        <aside class="filters-panel" aria-label="Product filters">
+          <div class="filter-heading">
+            <h3>Refine</h3>
+            <button type="button" id="clear-filters">Clear all</button>
+          </div>
+
+          <label class="search-label" for="product-search">Search products</label>
+          <div class="search-field">
+            <input id="product-search" type="search" placeholder="Try “ceramic”">
+            <span aria-hidden="true">⌕</span>
+          </div>
+
+          <fieldset class="filter-group">
+            <legend>Categories</legend>
+            <label><input type="checkbox" name="category" value="home"> Home décor</label>
+            <label><input type="checkbox" name="category" value="desk"> Desk essentials</label>
+            <label><input type="checkbox" name="category" value="bags"> Bags & pouches</label>
+            <label><input type="checkbox" name="category" value="drinkware"> Drinkware</label>
+            <label><input type="checkbox" name="category" value="accessories"> Lifestyle accessories</label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Price range (₹)</legend>
+            <div class="price-inputs">
+              <label>Min
+                <input id="min-price" type="number" min="0" placeholder="0">
+              </label>
+              <label>Max
+                <input id="max-price" type="number" min="0" placeholder="3000">
+              </label>
+            </div>
+            <p id="price-error" class="filter-error" aria-live="polite"></p>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Collection</legend>
+            <label><input type="checkbox" id="featured-filter"> Featured items</label>
+            <label><input type="checkbox" id="new-filter"> New arrivals</label>
+          </fieldset>
+        </aside>
+
+        <div class="catalog-results">
+          <div id="active-filters" class="active-filters" aria-live="polite"></div>
+          <div id="product-grid" class="catalog-grid"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <span class="empty-icon">⌕</span>
+            <h3>No objects found.</h3>
+            <p>Try a different search or clear some filters.</p>
+            <button type="button" class="button button-dark" id="empty-reset">Reset filters</button>
+          </div>
+          <p class="catalog-demo-note">Every product, price and description is fictional. This is a portfolio browsing demo, not a real shop.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">forma<span>&</span>co.</a>
+        <p>Thoughtful essentials.<br>Everyday living.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">EXPLORE</p>
+          <a href="index.html">Home</a>
+          <a href="shop.html">All products</a>
+          <a href="index.html#categories">Categories</a>
+        </div>
+        <div>
+          <p class="footer-heading">THE BRAND</p>
+          <a href="about.html">Our story</a>
+          <a href="faq.html">FAQ & contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FORMA & CO. — Fictional demo brand.</span>
+      <span>Designed & developed by Pratik Developer.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+    <p class="footer-disclaimer">Portfolio demonstration only. No purchases, payments, or real orders are available.</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>
+
+
+

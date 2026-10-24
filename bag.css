@@ -1,0 +1,384 @@
+
+.bag-page {
+  padding: 54px 0 80px;
+}
+
+.bag-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.bag-heading {
+  margin-bottom: 12px;
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.bag-intro {
+  max-width: 620px;
+  margin: 0 0 30px;
+  color: var(--muted, #777);
+  line-height: 1.7;
+}
+
+.bag-demo-note {
+  margin-bottom: 34px;
+  padding: 15px 18px;
+  border: 1px solid var(--line, #ddd);
+  background: var(--sand, #f7f4ef);
+  color: var(--charcoal, #292929);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bag-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 36px;
+  align-items: start;
+}
+
+.bag-items {
+  min-width: 0;
+}
+
+.bag-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line, #ddd);
+}
+
+.bag-item:first-child {
+  padding-top: 0;
+}
+
+.bag-item-image-link {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--sand, #f7f4ef);
+}
+
+.bag-item-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bag-item-info {
+  min-width: 0;
+}
+
+.bag-item-category {
+  margin: 0 0 8px;
+  color: var(--muted, #777);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bag-item-name {
+  margin: 0 0 10px;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.bag-item-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bag-item-name a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.bag-item-price,
+.bag-item-total {
+  color: var(--charcoal, #292929);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bag-item-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.bag-quantity-label {
+  color: var(--muted, #777);
+  font-size: 0.8rem;
+}
+
+.bag-quantity-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line, #ddd);
+}
+
+.bag-quantity-button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--charcoal, #292929);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.bag-quantity-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.bag-quantity-value {
+  min-width: 28px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.bag-remove-button {
+  padding: 7px 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted, #777);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.bag-remove-button:hover {
+  color: var(--charcoal, #292929);
+}
+
+.bag-summary {
+  position: sticky;
+  top: 24px;
+  padding: 24px;
+  border: 1px solid var(--line, #ddd);
+  background: #fff;
+}
+
+.bag-summary-title {
+  margin: 0 0 22px;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.bag-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 15px 0;
+  color: var(--muted, #777);
+  font-size: 0.88rem;
+}
+
+.bag-summary-total {
+  padding-top: 18px;
+  border-top: 1px solid var(--line, #ddd);
+  color: var(--charcoal, #292929);
+}
+
+.bag-summary-total strong {
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.bag-summary-disclaimer {
+  margin: 18px 0 0;
+  color: var(--muted, #777);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.bag-empty {
+  padding: 42px 24px;
+  border: 1px solid var(--line, #ddd);
+  text-align: center;
+}
+
+.bag-empty[hidden] {
+  display: none !important;
+}
+
+.bag-empty h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.bag-empty p {
+  margin: 0 0 22px;
+  color: var(--muted, #777);
+  line-height: 1.6;
+}
+
+.bag-status {
+  min-height: 1.5em;
+  margin: 20px 0 0;
+  color: var(--muted, #777);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .bag-page {
+    padding: 38px 0 60px;
+  }
+
+  .bag-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bag-summary {
+    position: static;
+  }
+
+  .bag-item {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .bag-item-controls {
+    gap: 9px;
+  }
+
+  .bag-quantity-label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .bag-container {
+    width: calc(100% - 28px);
+  }
+
+  .bag-item {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .bag-item-name {
+    font-size: 1.15rem;
+  }
+
+  .bag-summary {
+    padding: 19px;
+  }
+}
+/* =========================================
+   FORMA & CO. — DEMO BAG FINAL POLISH
+   ========================================= */
+.bag-page {
+  min-height: 55vh;
+}
+
+.bag-demo-note {
+  border-left: 3px solid var(--sage, #6d7564);
+}
+
+.bag-item-image-link img {
+  transition: transform 350ms ease;
+}
+
+.bag-item-image-link:hover img {
+  transform: scale(1.025);
+}
+
+.bag-item-name a:focus-visible,
+.bag-item-image-link:focus-visible {
+  outline-offset: 4px;
+}
+
+.bag-quantity-button,
+.bag-remove-button {
+  transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease;
+}
+
+.bag-quantity-button:not(:disabled):hover {
+  background: var(--sand, #e5ded1);
+}
+
+.bag-quantity-button:focus-visible,
+.bag-remove-button:focus-visible {
+  outline: 2px solid var(--clay, #b97851);
+  outline-offset: 2px;
+}
+
+.bag-summary {
+  background: var(--white, #fff);
+}
+
+.bag-summary-row span:last-child,
+.bag-item-price,
+.bag-item-total,
+.bag-summary-total strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.bag-status {
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .bag-summary {
+    padding: 21px;
+  }
+
+  .bag-summary-title {
+    margin-bottom: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bag-heading {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+
+  .bag-demo-note {
+    padding: 13px 14px;
+    font-size: 0.82rem;
+  }
+
+  .bag-item {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .bag-item-controls {
+    align-items: flex-start;
+  }
+
+  .bag-quantity-button {
+    width: 32px;
+    height: 34px;
+  }
+
+  .bag-quantity-value {
+    min-width: 24px;
+  }
+
+  .bag-summary {
+    padding: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bag-item-image-link img {
+    transition: none;
+  }
+}
