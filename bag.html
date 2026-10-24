@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7F5EF">
+  <title>Your Demo Bag — FORMA & CO.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bag.css">
+</head>
+<body id="top">
+  <div class="demo-notice">
+    PORTFOLIO DEMO · BROWSING ONLY · NO PURCHASES AVAILABLE
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">forma<span>&</span>co.</a>
+    <button class="menu-toggle" id="menu-toggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="main-nav">☰</button>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="about.html">Our Story</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="search.html">⌕ <span>Search</span></a>
+      <a href="wishlist.html" aria-label="Wishlist">♡</a>
+      <a href="bag.html" aria-current="page">Bag <span class="bag-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="bag-page">
+    <p class="eyebrow">YOUR SELECTED OBJECTS</p>
+    <h1>Your demo bag.</h1>
+    <p class="bag-intro">
+      A simulated shopping experience for the FORMA & CO. portfolio demo.
+    </p>
+
+    <div class="bag-demo-notice" role="note">
+      <strong>Browsing demo only</strong>
+      <p>These are sample items. This page cannot accept payments or create real orders. No checkout is available.</p>
+    </div>
+
+    <div class="bag-layout">
+      <section>
+        <div class="bag-section-heading">
+          <h2>Your items</h2>
+          <span id="bag-item-count">0 items</span>
+        </div>
+
+        <div id="bag-items" class="bag-items" aria-live="polite"></div>
+
+        <section id="bag-empty" class="bag-empty" hidden>
+          <h2>Your bag is taking a little break.</h2>
+          <p>You haven't added any demo items yet.</p>
+          <a class="button button-dark" href="shop.html">Explore the collection</a>
+        </section>
+
+        <p id="bag-status" class="bag-status" aria-live="polite"></p>
+      </section>
+
+      <aside class="bag-summary">
+        <p class="eyebrow">DEMO SUMMARY</p>
+        <h2>Bag summary</h2>
+
+        <div class="bag-summary-row">
+          <span>Items</span>
+          <span id="bag-summary-count">0</span>
+        </div>
+
+        <div class="bag-summary-row">
+          <span>Subtotal</span>
+          <span id="bag-subtotal">₹0 · approx. $0.00 USD</span>
+        </div>
+
+        <p class="bag-summary-note">
+          Sample prices only. Shipping, taxes and payment are not calculated.
+        </p>
+
+        <a class="button button-outline" href="shop.html">Continue browsing</a>
+
+        <p class="bag-no-checkout">
+          Checkout and real purchases are intentionally disabled.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">forma<span>&</span>co.</a>
+        <p>Thoughtful essentials.<br>Everyday living.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">EXPLORE</p>
+          <a href="shop.html">All products</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="index.html#categories">Categories</a>
+        </div>
+        <div>
+          <p class="footer-heading">THE BRAND</p>
+          <a href="about.html">Our story</a>
+          <a href="faq.html">FAQ & contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 FORMA & CO. — Fictional demo brand.</span>
+      <span>Designed & developed by Pratik Developer.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+
+    <p class="footer-disclaimer">
+      Portfolio demo only. No purchases, payments or real orders are available.
+    </p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="store.js"></script>
+  <script src="bag.js"></script>
+</body>
+</html>
